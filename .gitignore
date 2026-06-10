@@ -1,0 +1,7 @@
+/crypto_env
+# environnement virtuel Python
+
+.crypto_env/
+
+# fichier d'environnement
+.env
