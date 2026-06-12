@@ -1,0 +1,20 @@
+2026-06-12 12:39:26,305 - INFO - \U0001f680 Début pipeline Silver
+2026-06-12 12:39:26,306 - INFO - Connexion à MinIO
+2026-06-12 12:39:26,339 - INFO - Fichier Bronze sélectionné : 2026/06/11/raw.json
+2026-06-12 12:39:26,342 - INFO - Lecture fichier Bronze : 2026/06/11/raw.json
+2026-06-12 12:39:26,346 - INFO - Nombre de lignes initiales : 250
+2026-06-12 12:39:26,356 - INFO - Valeurs manquantes:
+high_24h                         1
+low_24h                          1
+price_change_24h                 1
+price_change_percentage_24h      1
+max_supply                     111
+dtype: int64
+2026-06-12 12:39:26,358 - INFO - Skewness max_supply = 5.944591874132061
+2026-06-12 12:39:26,358 - WARNING - Distribution très asymétrique \u2192 MEDIAN recommandée
+2026-06-12 12:39:26,359 - INFO - Lignes supprimées : 1
+2026-06-12 12:39:26,359 - INFO - Lignes restantes : 249
+2026-06-12 12:39:26,360 - INFO - Transformation Silver terminée
+2026-06-12 12:39:26,373 - INFO - Fichier local sauvegardé : ../data/silver/2026/06/12/crypto.parquet
+2026-06-12 12:39:26,380 - INFO - Fichier MinIO sauvegardé : 2026/06/12/crypto.parquet
+2026-06-12 12:39:26,380 - INFO - \u2705 Pipeline Silver terminé avec succès

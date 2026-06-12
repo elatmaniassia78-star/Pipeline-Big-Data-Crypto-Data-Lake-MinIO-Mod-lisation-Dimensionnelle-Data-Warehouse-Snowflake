@@ -1,0 +1,30 @@
+2026-06-12 13:00:05,639 - INFO - \U0001f680 ===== DÉBUT PIPELINE GOLD =====
+2026-06-12 13:00:05,639 - INFO - Input silver shape: (249, 24)
+2026-06-12 13:00:05,639 - INFO - Connexion à MinIO...
+2026-06-12 13:00:05,639 - INFO - Construction dim_crypto...
+2026-06-12 13:00:05,642 - INFO - dim_crypto après drop_duplicates: (249, 3)
+2026-06-12 13:00:05,642 - INFO - dim_crypto final: 249 lignes
+2026-06-12 13:00:05,642 - INFO - Construction dim_date...
+2026-06-12 13:00:05,644 - INFO - dim_date après drop_duplicates: (6, 8)
+2026-06-12 13:00:05,644 - INFO - dim_date final: 6 lignes
+2026-06-12 13:00:05,644 - INFO - Construction fact_table...
+2026-06-12 13:00:05,645 - INFO - fact initial shape: (249, 24)
+2026-06-12 13:00:05,647 - INFO - Merge dim_crypto terminé
+2026-06-12 13:00:05,649 - INFO - Merge dim_date terminé
+2026-06-12 13:00:05,649 - INFO - FK check - missing crypto_key: 0
+2026-06-12 13:00:05,649 - INFO - FK check - missing date_key: 0
+2026-06-12 13:00:05,650 - INFO - fact final shape: (249, 13)
+2026-06-12 13:00:05,650 - INFO - fact_table construite avec succès
+2026-06-12 13:00:05,650 - INFO - Début sauvegarde GOLD...
+2026-06-12 13:00:05,664 - INFO - Bucket crypto-gold créé
+2026-06-12 13:00:05,664 - INFO - Sauvegarde table: dim_crypto | shape: (249, 4)
+2026-06-12 13:00:05,668 - INFO - \u2714 Local saved: ../data/gold/2026/06/12/dim_crypto.parquet
+2026-06-12 13:00:05,714 - INFO - \u2714 MinIO saved: 2026/06/12/dim_crypto.parquet
+2026-06-12 13:00:05,714 - INFO - Sauvegarde table: dim_date | shape: (6, 9)
+2026-06-12 13:00:05,717 - INFO - \u2714 Local saved: ../data/gold/2026/06/12/dim_date.parquet
+2026-06-12 13:00:05,766 - INFO - \u2714 MinIO saved: 2026/06/12/dim_date.parquet
+2026-06-12 13:00:05,766 - INFO - Sauvegarde table: fact_crypto_snapshot | shape: (249, 13)
+2026-06-12 13:00:05,770 - INFO - \u2714 Local saved: ../data/gold/2026/06/12/fact_crypto_snapshot.parquet
+2026-06-12 13:00:05,817 - INFO - \u2714 MinIO saved: 2026/06/12/fact_crypto_snapshot.parquet
+2026-06-12 13:00:05,817 - INFO - Sauvegarde GOLD terminée
+2026-06-12 13:00:05,817 - INFO - \u2705 ===== PIPELINE GOLD TERMINÉ =====
