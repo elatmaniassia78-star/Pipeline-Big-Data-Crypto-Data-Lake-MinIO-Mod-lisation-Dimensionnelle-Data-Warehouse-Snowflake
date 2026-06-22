@@ -4,4 +4,7 @@
 .crypto_env/
 
 # fichier d'environnement
+venv/
+*.log
+__pycache__/
 .env
